@@ -17,7 +17,15 @@ public class MainInteractor implements MainContracts.Interactor{
 
     @Override
     public void saveTask(Task task) {
-        sharedPreferenceRepo.saveTask(task);
+
+        int result =  sharedPreferenceRepo.saveTask(task);
+
+        if(result>0){
+            output.onSuccess(task);
+        }
+        else{
+            output.onFailure("saving item was failed");
+        }
     }
 
 }

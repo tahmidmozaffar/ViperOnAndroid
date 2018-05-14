@@ -13,10 +13,9 @@ public class MainContracts {
     }
 
     public  interface InteractionOutput {
+
         void onSuccess(Task task);
-
         void onFailure(String errorMessage);
-
     }
 
     public  interface Router {

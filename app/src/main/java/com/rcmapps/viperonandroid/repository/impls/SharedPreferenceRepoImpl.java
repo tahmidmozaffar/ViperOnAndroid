@@ -18,8 +18,11 @@ public class SharedPreferenceRepoImpl implements SharedPreferenceRepo {
     }
 
     @Override
-    public void saveTask(Task task) {
+    public int saveTask(Task task) {
         //save
+
+        //success
+        return 1;
     }
 
     @Override
